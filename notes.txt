@@ -1,0 +1,33 @@
+NOTES
+
+To do: create report: how many reads map back to metagenome/sample
+
+Idea: Remove sam/unsorted.bam files, metaspades: K* merged_R* tmp/ corrected/
+
+Idea: Run binning in parallel
+
+Function: allow user to supply genes of interest; blast these genes, create table: contig;bin;query;pid;eval;aln-len
+
+Function: Prokka annotation for most complete/pure bins
+
+Function: place bins in tree
+
+Idea: different contig length cutoffs for binning methods
+Note: including MANY small contigs (A LOT of asm bp) may have big impact (more weight) during binning, as focus shift/weight decreasess from long, high quality contigs
+
+Idea: split up large contigs so they get more weight in analysis, remerge after binning
+
+Idea: more stringent mapping may improve binning (especially when many highly similar strains are present)
+
+Idea: provide input for downstream analysis with mmgenome/anvio
+
+Generate final output folder.
+- asm
+- asm report
+- bins/unbinned
+- 16S on contig/reads
+- checkm bin_qa_plot
+- Contig table: contig_id, bin, tax, length, gc, cov_i, cov_n
+- Bin table: bin_id, taxonpath, completeness, contamination, tot_size, n_contigs, n50, cov_i, cov_n, mapped_reads_i, mapped_reads_n
+- plots - binning plot: diffcov, family level, use reads summary to select most abundant
+- plots - binning performance plot
